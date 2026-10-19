@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 120" width="980" height="120" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" role="img" aria-label="soldecomp pipeline: fetch, analyze, hydrate, replay, mutate and scan">
+  <defs>
+    <linearGradient id="grad" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="980" y2="0">
+      <stop offset="0" stop-color="#9945FF"/>
+      <stop offset="1" stop-color="#14F195"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <rect x="10"  y="28" width="160" height="64" rx="12" fill="url(#grad)"/>
+    <rect x="194" y="28" width="160" height="64" rx="12" fill="url(#grad)"/>
+    <rect x="378" y="28" width="160" height="64" rx="12" fill="url(#grad)"/>
+    <rect x="562" y="28" width="160" height="64" rx="12" fill="url(#grad)"/>
+    <rect x="746" y="28" width="224" height="64" rx="12" fill="url(#grad)"/>
+  </g>
+  <g fill="#ffffff" text-anchor="middle">
+    <text x="90"  y="56" font-size="15" font-weight="700">Fetch</text>
+    <text x="90"  y="75" font-size="11" opacity="0.9">deployed ELF</text>
+    <text x="274" y="56" font-size="15" font-weight="700">Analyze</text>
+    <text x="274" y="75" font-size="11" opacity="0.9">lift + decompile</text>
+    <text x="458" y="56" font-size="15" font-weight="700">Hydrate</text>
+    <text x="458" y="75" font-size="11" opacity="0.9">prior-slot state</text>
+    <text x="642" y="56" font-size="15" font-weight="700">Replay</text>
+    <text x="642" y="75" font-size="11" opacity="0.9">in LiteSVM</text>
+    <text x="858" y="56" font-size="15" font-weight="700">Mutate + Scan</text>
+    <text x="858" y="75" font-size="11" opacity="0.9">diff effects, find leads</text>
+  </g>
+  <g fill="#94a3b8">
+    <path d="M177 54 L187 60 L177 66 Z"/>
+    <path d="M361 54 L371 60 L361 66 Z"/>
+    <path d="M545 54 L555 60 L545 66 Z"/>
+    <path d="M729 54 L739 60 L729 66 Z"/>
+  </g>
+</svg>

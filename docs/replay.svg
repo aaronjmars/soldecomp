@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 240" width="760" height="240" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" role="img" aria-label="Replay baseline and one changed input, then compare the effects">
+  <defs>
+    <linearGradient id="grad2" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="760" y2="0">
+      <stop offset="0" stop-color="#9945FF"/>
+      <stop offset="1" stop-color="#14F195"/>
+    </linearGradient>
+  </defs>
+  <rect x="230" y="16"  width="300" height="48" rx="12" fill="url(#grad2)"/>
+  <rect x="70"  y="96"  width="260" height="56" rx="12" fill="url(#grad2)"/>
+  <rect x="430" y="96"  width="260" height="56" rx="12" fill="url(#grad2)"/>
+  <rect x="210" y="184" width="340" height="48" rx="12" fill="url(#grad2)"/>
+  <g fill="#ffffff" text-anchor="middle">
+    <text x="380" y="45" font-size="14" font-weight="700">Pinned ELF + hydrated account state</text>
+    <text x="200" y="121" font-size="14" font-weight="700">Replay baseline</text>
+    <text x="200" y="139" font-size="11" opacity="0.9">unchanged inputs</text>
+    <text x="560" y="121" font-size="14" font-weight="700">Replay with one</text>
+    <text x="560" y="139" font-size="11" opacity="0.9">input changed</text>
+    <text x="380" y="214" font-size="13" font-weight="700">Compare: compute units, logs, balance deltas</text>
+  </g>
+  <g stroke="#94a3b8" stroke-width="2" fill="none">
+    <path d="M330 64 C300 80 230 80 200 94"/>
+    <path d="M430 64 C460 80 530 80 560 94"/>
+    <path d="M200 152 C200 168 330 170 370 182"/>
+    <path d="M560 152 C560 168 430 170 390 182"/>
+  </g>
+  <g fill="#94a3b8">
+    <path d="M196 96 L204 96 L200 90 Z"/>
+    <path d="M556 96 L564 96 L560 90 Z"/>
+    <path d="M374 184 L382 184 L378 178 Z"/>
+    <path d="M374 184 L382 184 L378 178 Z"/>
+  </g>
+</svg>
