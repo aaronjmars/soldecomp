@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "evidence_class": "independent_example_known_bug",
+  "fixture": "../fixtures/security-examples.json",
+  "checks": [
+    {
+      "name": "missing-signer",
+      "kind": "authorization",
+      "instruction_data_base64": "AQAFAAAAAAAAAA==",
+      "prelude_instructions": [
+        {
+          "program_id": "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS",
+          "accounts": [
+            {
+              "pubkey": "CjKyGYwgfxW8o4VsYKS1f7MfUMDWok5q3b45RXU6XQ8w",
+              "is_signer": false,
+              "is_writable": true
+            },
+            {
+              "pubkey": "cGfHiC6Kgg3FpFZvgwGcswsCRtp4aBP2fzuXRQPizuN",
+              "is_signer": true,
+              "is_writable": false
+            },
+            {
+              "pubkey": "11111111111111111111111111111111",
+              "is_signer": false,
+              "is_writable": false
+            }
+          ],
+          "data_base64": "AQAFAAAAAAAAAA=="
+        }
+      ],
+      "mutation": {
+        "signer_overrides": {
+          "cGfHiC6Kgg3FpFZvgwGcswsCRtp4aBP2fzuXRQPizuN": false
+        }
+      },
+      "expected_finding": true,
+      "state_assertions": [
+        {
+          "field": {
+            "account": "CjKyGYwgfxW8o4VsYKS1f7MfUMDWok5q3b45RXU6XQ8w",
+            "offset": 33,
+            "encoding": "u64_le"
+          },
+          "baseline": 10,
+          "scenario": 10
+        }
+      ]
+    }
+  ]
+}

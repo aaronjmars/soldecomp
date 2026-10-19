@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "program": {
+    "id": "5XsZZB1iRNHboU8o2RTEvcNMKHiM61KdW22vegUubrZ8",
+    "elf": "../programs/owner-secure.so",
+    "sha256": "992faeb239a56de1e5d446c856bd1fdf38d374680e51ba250ea74e3245d850ce",
+    "loader": "BPFLoader2111111111111111111111111111111111"
+  },
+  "origin": {
+    "kind": "synthetic_source_control",
+    "replay_mode": "instruction",
+    "state_exact": true,
+    "program_version_verified": true
+  },
+  "payer": "uXhh74h6LYEULS6BTTmWC4wG5GiqBzMgtvSTGJ5EVSw",
+  "instruction": {
+    "program_id": "5XsZZB1iRNHboU8o2RTEvcNMKHiM61KdW22vegUubrZ8",
+    "accounts": [
+      {
+        "pubkey": "FMj7rpstrWS9YwstxvXML9NVJgezW8GSEUsS2Rg5gg9S",
+        "is_signer": false,
+        "is_writable": false
+      }
+    ],
+    "data_base64": ""
+  },
+  "accounts": {
+    "FMj7rpstrWS9YwstxvXML9NVJgezW8GSEUsS2Rg5gg9S": {
+      "lamports": 1000000,
+      "owner": "11111111111111111111111111111111",
+      "executable": false,
+      "rent_epoch": 0,
+      "data_base64": "AAAAAAAAAAA="
+    },
+    "uXhh74h6LYEULS6BTTmWC4wG5GiqBzMgtvSTGJ5EVSw": {
+      "lamports": 1000000000,
+      "owner": "11111111111111111111111111111111",
+      "executable": false,
+      "rent_epoch": 0,
+      "data_base64": ""
+    }
+  },
+  "mutations": [],
+  "notes": [
+    "Source-built owner-check control. The first account is read-only and System-owned; the secure variant rejects a non-System owner. Synthetic program, not a deployed exploit."
+  ]
+}

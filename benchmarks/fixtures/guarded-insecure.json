@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "program": {
+    "id": "J53Rnj5NzNgCVAe4XkuXpZ4wppQsMvm6osHSx7gZZUfX",
+    "elf": "../programs/guarded-insecure.so",
+    "sha256": "4a4679943793b4077277abe120e677e2a70a8afbad54f644604ff8915c51f232",
+    "loader": "BPFLoader2111111111111111111111111111111111"
+  },
+  "origin": {
+    "kind": "synthetic_source_control",
+    "replay_mode": "instruction",
+    "execution_slot": 1,
+    "clock_sysvar_base64": "AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADoAwAAAAAAAA==",
+    "state_exact": true,
+    "program_version_verified": true
+  },
+  "payer": "Ge2SUBi5nxAuEdQ6AJpnpwL3uMUF1QEzSrUBgHwvMbFj",
+  "instruction": {
+    "program_id": "J53Rnj5NzNgCVAe4XkuXpZ4wppQsMvm6osHSx7gZZUfX",
+    "accounts": [
+      {
+        "pubkey": "7Hu2dZ8zsEv1WTa4TMNZbAaUCtZ7QxngKpNU1e9xG1BF",
+        "is_signer": false,
+        "is_writable": true
+      },
+      {
+        "pubkey": "SysvarC1ock11111111111111111111111111111111",
+        "is_signer": false,
+        "is_writable": false
+      }
+    ],
+    "data_base64": "AQEAAAAAAAAA"
+  },
+  "accounts": {
+    "7Hu2dZ8zsEv1WTa4TMNZbAaUCtZ7QxngKpNU1e9xG1BF": {
+      "lamports": 1000000,
+      "owner": "J53Rnj5NzNgCVAe4XkuXpZ4wppQsMvm6osHSx7gZZUfX",
+      "executable": false,
+      "rent_epoch": 0,
+      "data_base64": "AAAAAAAAAADoAwAAAAAAABQAAAAAAAAAAAAAAAAAAAA="
+    },
+    "Ge2SUBi5nxAuEdQ6AJpnpwL3uMUF1QEzSrUBgHwvMbFj": {
+      "lamports": 1000000000,
+      "owner": "11111111111111111111111111111111",
+      "executable": false,
+      "rent_epoch": 0,
+      "data_base64": ""
+    },
+    "SysvarC1ock11111111111111111111111111111111": null
+  },
+  "mutations": [],
+  "notes": [
+    "Synthetic source-built controls for stale oracle, slippage, and lending solvency. Not a deployed protocol."
+  ]
+}

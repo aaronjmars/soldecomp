@@ -1,0 +1,108 @@
+{
+  "kind": "historical_dependency_closure",
+  "transaction_slot": 450000000,
+  "target_transaction_index": 884,
+  "writer_count": 11,
+  "dependency_account_count": 28,
+  "carried_accounts": [
+    "2qe6UGWxM83DR9Fk4E1bgDHv9GcWQVzcTe9qGpUdBmwV"
+  ],
+  "carried_oracle_sha256": "82d4921408c9d864470344ae07716bda71fe917d61a34822f608f2c3dae4669a",
+  "writers": [
+    {
+      "signature": "2fwfV37TP2mUxn677ZQ6YmbwSQT1h7tFHycZZCBD9ffvWKaPQ6x6gWUHqeUoeVEUKMjorpoqL2dbPzcnh4E8eXy1",
+      "transaction_index": 106,
+      "kind": "successful_replay",
+      "recorded_compute_units": 324,
+      "local_compute_units": 324,
+      "changed_target_accounts": []
+    },
+    {
+      "signature": "3f9QRCA5n1DivkWpVCF1hYoGNxzd866LYV4S7r8Qo6xjVGLWorN1aGcRvuznoNFSownYaGQW9cbWgWKk8PGibs4M",
+      "transaction_index": 110,
+      "kind": "successful_replay",
+      "recorded_compute_units": 324,
+      "local_compute_units": 324,
+      "changed_target_accounts": []
+    },
+    {
+      "signature": "YKYMsHtVkk87LPFnA8mjwrgZ9qVz8XZWPgLKbVDV683XErmF8yED3FKgo5KafgZ8XCzkjoJkqFqFQwg2jqikhKC",
+      "transaction_index": 117,
+      "kind": "successful_replay",
+      "recorded_compute_units": 324,
+      "local_compute_units": 324,
+      "changed_target_accounts": []
+    },
+    {
+      "signature": "4gEdAYLX6HTsmMgHoAUi2hTAjF6BnuW1exo9WJs798fSNKiRTerXp1Qoh2jtkZkCr6LxiREK9K62jV8nExXZNbXp",
+      "transaction_index": 121,
+      "kind": "successful_replay",
+      "recorded_compute_units": 324,
+      "local_compute_units": 324,
+      "changed_target_accounts": []
+    },
+    {
+      "signature": "54H7LvGMRuXvdpoYd7tin74EhAXaBxe9KWyt61EMTN9knTa9aM9DUSbQyK8icfLaw76iiVX4c7tTuUSzEzd9quGS",
+      "transaction_index": 124,
+      "kind": "successful_replay",
+      "recorded_compute_units": 324,
+      "local_compute_units": 324,
+      "changed_target_accounts": []
+    },
+    {
+      "signature": "5btwSDZ648KXj812bM276a6oMQC8RmVEtoyQbhJtKFMaiqmo5WuDK8DGVd3Xmzu9L5jJEUeWHQ6pktJsUQnSQogj",
+      "transaction_index": 127,
+      "kind": "successful_replay",
+      "recorded_compute_units": 324,
+      "local_compute_units": 324,
+      "changed_target_accounts": []
+    },
+    {
+      "signature": "2FiJsAn5uLHG6MRsbpfz1aUVouukRP5JBKRL5EShn9Nw8ad3caGMNHRNXu6RiEY2WUAsQsWNSeUqWFmAzuVPudVa",
+      "transaction_index": 133,
+      "kind": "successful_replay",
+      "recorded_compute_units": 324,
+      "local_compute_units": 324,
+      "changed_target_accounts": [
+        "2qe6UGWxM83DR9Fk4E1bgDHv9GcWQVzcTe9qGpUdBmwV"
+      ]
+    },
+    {
+      "signature": "67RUUsbYEA762LbbMDevggGQbcJNbY75T3P6oTPBbaYAoJiq4mZPq96bgT2spn28PAHcsiUVJVZERDhYS8gGX7bw",
+      "transaction_index": 137,
+      "kind": "successful_replay",
+      "recorded_compute_units": 324,
+      "local_compute_units": 324,
+      "changed_target_accounts": []
+    },
+    {
+      "signature": "2K8SxmZmJaDwYMjfdbWfjRpExgKGDGhLsx5DvyiYQBNjKUPrmpv6yj7gAHFXLbJhRCRGPX2ZaGwxPcx96SkuLgyC",
+      "transaction_index": 141,
+      "kind": "successful_replay",
+      "recorded_compute_units": 304,
+      "local_compute_units": 304,
+      "changed_target_accounts": []
+    },
+    {
+      "signature": "5ZaVTwiG2nuBbSuUjL6PLb4HC9pH45qcSZ7QXtY7CYihtgKCPRiLtfbQEeDyVJUGjQnmfJ4nSGJ52tF41PwYDEvZ",
+      "transaction_index": 145,
+      "kind": "successful_replay",
+      "recorded_compute_units": 400,
+      "local_compute_units": 400,
+      "changed_target_accounts": []
+    },
+    {
+      "signature": "3eCSesYvYF7oWogDy9Lb6zhoncieM8VQcMkUSm2CN2jEDJ2ddcY63XkkHrHbKAMdqgbEdLaMEYi5A5UZX2Cx2AA8",
+      "transaction_index": 492,
+      "kind": "successful_replay",
+      "recorded_compute_units": 604,
+      "local_compute_units": 604,
+      "changed_target_accounts": []
+    }
+  ],
+  "limitations": [
+    "The backwards dependency closure includes successful earlier writers of captured accounts and all accounts read by those writers.",
+    "Local replay must match the historical runtime and all relevant predecessor state; compare logs, compute use, and account effects before accepting the candidate state.",
+    "For an inner CPI, parent instructions within the target transaction are not included in the carried state."
+  ]
+}

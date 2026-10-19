@@ -1,0 +1,179 @@
+{
+  "source_repository": "https://github.com/Aypp23/solana-security-examples",
+  "source_commit": "e0870e93453100828140267d44252dbbe4c3f933",
+  "elf_sha256": "0c0c7bae750e0fcd579f0bf961822c6a40df3f65f17c5babd610a3abd2208a68",
+  "benchmark_passed": true,
+  "program_cases": {
+    "passed": 10,
+    "total": 10
+  },
+  "security_summary": {
+    "true_positive": 6,
+    "false_positive": 0,
+    "true_negative": 7,
+    "false_negative": 0
+  },
+  "real_world_known_bug_cases": 0,
+  "independent_example_results": [
+    {
+      "name": "security-examples-vulnerable",
+      "evidence_class": "independent_example_known_bug",
+      "kind": "authorization",
+      "finding": true,
+      "expected_finding": true,
+      "scenario_success": true,
+      "scenario_error": null,
+      "steps": [
+        {
+          "success": true,
+          "error": null
+        },
+        {
+          "success": true,
+          "error": null
+        }
+      ],
+      "state_assertions": [
+        {
+          "field": {
+            "account": "CjKyGYwgfxW8o4VsYKS1f7MfUMDWok5q3b45RXU6XQ8w",
+            "offset": 33,
+            "encoding": "u64_le"
+          },
+          "baseline": 10,
+          "scenario": 10,
+          "expected_baseline": 10,
+          "expected_scenario": 10,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "name": "security-examples-secure",
+      "evidence_class": "independent_example_clean_control",
+      "kind": "authorization",
+      "finding": false,
+      "expected_finding": false,
+      "scenario_success": false,
+      "scenario_error": "InstructionError(0, Custom(1))",
+      "steps": [
+        {
+          "success": true,
+          "error": null
+        },
+        {
+          "success": false,
+          "error": "InstructionError(0, Custom(1))"
+        }
+      ],
+      "state_assertions": [
+        {
+          "field": {
+            "account": "CjKyGYwgfxW8o4VsYKS1f7MfUMDWok5q3b45RXU6XQ8w",
+            "offset": 33,
+            "encoding": "u64_le"
+          },
+          "baseline": 10,
+          "scenario": 5,
+          "expected_baseline": 10,
+          "expected_scenario": 5,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "name": "security-replay-vulnerable",
+      "evidence_class": "independent_example_known_bug",
+      "kind": "replay_protection",
+      "finding": true,
+      "expected_finding": true,
+      "scenario_success": true,
+      "scenario_error": null,
+      "steps": [
+        {
+          "success": true,
+          "error": null
+        },
+        {
+          "success": true,
+          "error": null
+        }
+      ],
+      "state_assertions": [
+        {
+          "field": {
+            "account": "CjKyGYwgfxW8o4VsYKS1f7MfUMDWok5q3b45RXU6XQ8w",
+            "offset": 33,
+            "encoding": "u64_le"
+          },
+          "baseline": 2,
+          "scenario": 2,
+          "expected_baseline": 2,
+          "expected_scenario": 2,
+          "matched": true
+        },
+        {
+          "field": {
+            "account": "CjKyGYwgfxW8o4VsYKS1f7MfUMDWok5q3b45RXU6XQ8w",
+            "offset": 41,
+            "encoding": "u64_le"
+          },
+          "baseline": 0,
+          "scenario": 0,
+          "expected_baseline": 0,
+          "expected_scenario": 0,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "name": "security-replay-secure",
+      "evidence_class": "independent_example_clean_control",
+      "kind": "replay_protection",
+      "finding": false,
+      "expected_finding": false,
+      "scenario_success": false,
+      "scenario_error": "InstructionError(0, Custom(4))",
+      "steps": [
+        {
+          "success": true,
+          "error": null
+        },
+        {
+          "success": false,
+          "error": "InstructionError(0, Custom(4))"
+        }
+      ],
+      "state_assertions": [
+        {
+          "field": {
+            "account": "CjKyGYwgfxW8o4VsYKS1f7MfUMDWok5q3b45RXU6XQ8w",
+            "offset": 33,
+            "encoding": "u64_le"
+          },
+          "baseline": 2,
+          "scenario": 1,
+          "expected_baseline": 2,
+          "expected_scenario": 1,
+          "matched": true
+        },
+        {
+          "field": {
+            "account": "CjKyGYwgfxW8o4VsYKS1f7MfUMDWok5q3b45RXU6XQ8w",
+            "offset": 41,
+            "encoding": "u64_le"
+          },
+          "baseline": 2,
+          "scenario": 1,
+          "expected_baseline": 2,
+          "expected_scenario": 1,
+          "matched": true
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Examples are intentionally vulnerable teaching programs, not deployed exploit cases.",
+    "Declared expected labels and field offsets come from the public source; field accuracy on closed-source binaries is unmeasured."
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "kind": "full_runtime_comparison",
+  "signature": "3pdBmRFjDMKPgpu7SDcnYi8DZPHfhxZisjqgAjwSXULuenuvApQtn6fHEzaQM7GnASvhCdWGxyX7Z6dDq8hixwRT",
+  "recorded_success": true,
+  "local_success": true,
+  "recorded_compute_units": 117577,
+  "local_compute_units": 117562,
+  "compute_unit_difference": -15,
+  "recorded_log_count": 40,
+  "local_log_count": 40,
+  "first_log_difference": {
+    "index": 21,
+    "recorded": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 76 of 89540 compute units",
+    "local": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 76 of 89555 compute units",
+    "program_id": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+    "recorded_consumed": 76,
+    "local_consumed": 76,
+    "recorded_remaining_budget": 89540,
+    "local_remaining_budget": 89555
+  },
+  "log_differences": [
+    {
+      "index": 21,
+      "recorded": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 76 of 89540 compute units",
+      "local": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 76 of 89555 compute units",
+      "program_id": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+      "recorded_consumed": 76,
+      "local_consumed": 76,
+      "recorded_remaining_budget": 89540,
+      "local_remaining_budget": 89555
+    },
+    {
+      "index": 24,
+      "recorded": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 76 of 88161 compute units",
+      "local": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 76 of 88176 compute units",
+      "program_id": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+      "recorded_consumed": 76,
+      "local_consumed": 76,
+      "recorded_remaining_budget": 88161,
+      "local_remaining_budget": 88176
+    },
+    {
+      "index": 26,
+      "recorded": "Program goonuddtQRrWqqn5nFyczVKaie28f3kDkHWkHtURSLE consumed 72459 of 125470 compute units",
+      "local": "Program goonuddtQRrWqqn5nFyczVKaie28f3kDkHWkHtURSLE consumed 72459 of 125485 compute units",
+      "program_id": "goonuddtQRrWqqn5nFyczVKaie28f3kDkHWkHtURSLE",
+      "recorded_consumed": 72459,
+      "local_consumed": 72459,
+      "recorded_remaining_budget": 125470,
+      "local_remaining_budget": 125485
+    },
+    {
+      "index": 29,
+      "recorded": "Program JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4 consumed 91 of 51069 compute units",
+      "local": "Program JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4 consumed 91 of 51084 compute units",
+      "program_id": "JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4",
+      "recorded_consumed": 91,
+      "local_consumed": 91,
+      "recorded_remaining_budget": 51069,
+      "local_remaining_budget": 51084
+    },
+    {
+      "index": 32,
+      "recorded": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 76 of 49822 compute units",
+      "local": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 76 of 49837 compute units",
+      "program_id": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+      "recorded_consumed": 76,
+      "local_consumed": 76,
+      "recorded_remaining_budget": 49822,
+      "local_remaining_budget": 49837
+    },
+    {
+      "index": 35,
+      "recorded": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 76 of 48333 compute units",
+      "local": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 76 of 48348 compute units",
+      "program_id": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+      "recorded_consumed": 76,
+      "local_consumed": 76,
+      "recorded_remaining_budget": 48333,
+      "local_remaining_budget": 48348
+    },
+    {
+      "index": 37,
+      "recorded": "Program JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4 consumed 117277 of 165406 compute units",
+      "local": "Program JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4 consumed 117262 of 165406 compute units",
+      "program_id": "JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4",
+      "recorded_consumed": 117277,
+      "local_consumed": 117262,
+      "recorded_remaining_budget": 165406,
+      "local_remaining_budget": 165406
+    }
+  ],
+  "limitations": [
+    "Matching logs and account effects do not prove identical validator execution.",
+    "The first remaining-budget difference bounds where extra compute was spent; it does not identify the exact instruction."
+  ]
+}

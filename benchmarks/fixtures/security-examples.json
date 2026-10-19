@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "program": {
+    "id": "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS",
+    "elf": "../programs/security-examples.so",
+    "sha256": "0c0c7bae750e0fcd579f0bf961822c6a40df3f65f17c5babd610a3abd2208a68",
+    "loader": "BPFLoader2111111111111111111111111111111111"
+  },
+  "origin": {
+    "kind": "independently_authored_source_example",
+    "replay_mode": "instruction",
+    "state_exact": true,
+    "program_version_verified": true,
+    "source_repository": "https://github.com/Aypp23/solana-security-examples",
+    "source_commit": "e0870e93453100828140267d44252dbbe4c3f933",
+    "build_override": "cargo update -p blake3 --precise 1.8.2 for Solana rustc 1.84.1-dev"
+  },
+  "payer": "uXhh74h6LYEULS6BTTmWC4wG5GiqBzMgtvSTGJ5EVSw",
+  "instruction": {
+    "program_id": "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS",
+    "accounts": [
+      {
+        "pubkey": "CjKyGYwgfxW8o4VsYKS1f7MfUMDWok5q3b45RXU6XQ8w",
+        "is_signer": false,
+        "is_writable": true
+      },
+      {
+        "pubkey": "cGfHiC6Kgg3FpFZvgwGcswsCRtp4aBP2fzuXRQPizuN",
+        "is_signer": true,
+        "is_writable": false
+      },
+      {
+        "pubkey": "11111111111111111111111111111111",
+        "is_signer": false,
+        "is_writable": false
+      }
+    ],
+    "data_base64": "AQAFAAAAAAAAAA=="
+  },
+  "accounts": {
+    "CjKyGYwgfxW8o4VsYKS1f7MfUMDWok5q3b45RXU6XQ8w": {
+      "lamports": 1000000,
+      "owner": "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS",
+      "executable": false,
+      "rent_epoch": 0,
+      "data_base64": "AQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJAAAAAAAAAAAAAAAAAAAAAAA="
+    },
+    "cGfHiC6Kgg3FpFZvgwGcswsCRtp4aBP2fzuXRQPizuN": {
+      "lamports": 1000000,
+      "owner": "11111111111111111111111111111111",
+      "executable": false,
+      "rent_epoch": 0,
+      "data_base64": ""
+    },
+    "uXhh74h6LYEULS6BTTmWC4wG5GiqBzMgtvSTGJ5EVSw": {
+      "lamports": 1000000000,
+      "owner": "11111111111111111111111111111111",
+      "executable": false,
+      "rent_epoch": 0,
+      "data_base64": ""
+    },
+    "11111111111111111111111111111111": {
+      "lamports": 1,
+      "owner": "NativeLoader1111111111111111111111111111111",
+      "executable": true,
+      "rent_epoch": 0,
+      "data_base64": ""
+    }
+  },
+  "mutations": [],
+  "notes": [
+    "Independent example repository includes vulnerable and secure handlers in one ELF. This is a teaching example, not a deployed contract."
+  ]
+}

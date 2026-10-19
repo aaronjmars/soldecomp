@@ -1,0 +1,34 @@
+{
+  "kind": "automatic_field_discovery_evidence",
+  "cases": [
+    {
+      "program_sha256": "6a2a8670a56b25baac9f956c428358697b537fab7d0c3ebc13eeb880600f767d",
+      "fixture": "benchmarks/fixtures/goonfi-original.json",
+      "observed_fields": 84,
+      "mapped_account_loads": 108,
+      "named_spl_fields": 1,
+      "example_fields": [
+        {
+          "account_index": 4,
+          "offset": 64,
+          "width": 8,
+          "known_field": "spl_token_amount",
+          "read_count": 1
+        }
+      ]
+    },
+    {
+      "program_sha256": "041d5264f501ec85079b702379760047c6bdb42df76f35a538e80f800d5643c0",
+      "fixture": "benchmarks/fixtures/auth-insecure.json",
+      "observed_fields": 1,
+      "mapped_account_loads": 1,
+      "named_spl_fields": 0,
+      "example_fields": []
+    }
+  ],
+  "limitations": [
+    "Only executed direct loads are cataloged.",
+    "Tracing the independent security-examples ELF currently fails in LiteSVM with invalid account data for instruction; ordinary replay succeeds.",
+    "Unknown program-specific field meanings and security rules still require review."
+  ]
+}

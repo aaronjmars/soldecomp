@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "evidence_class": "synthetic_clean_control",
+  "fixture": "../fixtures/auth-secure.json",
+  "checks": [
+    {
+      "name": "unsigned-second-update",
+      "kind": "authorization",
+      "prelude_instructions": [
+        {
+          "program_id": "66kiM7WGoYBmXqJrX4BiiZ6eNHq8CM6FtGLPArzS5KHi",
+          "accounts": [
+            {
+              "pubkey": "CjKyGYwgfxW8o4VsYKS1f7MfUMDWok5q3b45RXU6XQ8w",
+              "is_signer": true,
+              "is_writable": true
+            }
+          ],
+          "data_base64": ""
+        }
+      ],
+      "mutation": {
+        "signer_overrides": {
+          "CjKyGYwgfxW8o4VsYKS1f7MfUMDWok5q3b45RXU6XQ8w": false
+        }
+      },
+      "expected_finding": false,
+      "expected_error_contains": "Custom(2)"
+    }
+  ]
+}

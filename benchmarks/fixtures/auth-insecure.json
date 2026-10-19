@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "program": {
+    "id": "66kiM7WGoYBmXqJrX4BiiZ6eNHq8CM6FtGLPArzS5KHi",
+    "elf": "../programs/auth-insecure.so",
+    "sha256": "041d5264f501ec85079b702379760047c6bdb42df76f35a538e80f800d5643c0",
+    "loader": "BPFLoader2111111111111111111111111111111111"
+  },
+  "origin": {
+    "kind": "synthetic_source_control",
+    "replay_mode": "instruction",
+    "state_exact": true,
+    "program_version_verified": true
+  },
+  "payer": "uXhh74h6LYEULS6BTTmWC4wG5GiqBzMgtvSTGJ5EVSw",
+  "instruction": {
+    "program_id": "66kiM7WGoYBmXqJrX4BiiZ6eNHq8CM6FtGLPArzS5KHi",
+    "accounts": [
+      {
+        "pubkey": "CjKyGYwgfxW8o4VsYKS1f7MfUMDWok5q3b45RXU6XQ8w",
+        "is_signer": true,
+        "is_writable": true
+      }
+    ],
+    "data_base64": ""
+  },
+  "accounts": {
+    "CjKyGYwgfxW8o4VsYKS1f7MfUMDWok5q3b45RXU6XQ8w": {
+      "lamports": 1000000,
+      "owner": "66kiM7WGoYBmXqJrX4BiiZ6eNHq8CM6FtGLPArzS5KHi",
+      "executable": false,
+      "rent_epoch": 0,
+      "data_base64": "AAAAAAAAAAA="
+    },
+    "uXhh74h6LYEULS6BTTmWC4wG5GiqBzMgtvSTGJ5EVSw": {
+      "lamports": 1000000000,
+      "owner": "11111111111111111111111111111111",
+      "executable": false,
+      "rent_epoch": 0,
+      "data_base64": ""
+    }
+  },
+  "mutations": [],
+  "notes": [
+    "Source-built authorization control adapted from the known missing-signer pattern in Coral Sealevel Attacks. This is a synthetic program, not a deployed exploit."
+  ]
+}

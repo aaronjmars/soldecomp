@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "name": "goonfi-original-deployed",
+      "program_sha256": "6a2a8670a56b25baac9f956c428358697b537fab7d0c3ebc13eeb880600f767d",
+      "known_balance_donation_bug": true,
+      "control_kind": "published_deployed_bug",
+      "evidence": "https://osec.io/blog/goonfi-decompilation/",
+      "scope": "OtterSec disclosed balance-derived inventory skew in deployed GoonFi V2; the local test demonstrates output sensitivity, not profit."
+    },
+    {
+      "name": "goonfi-later-deployed",
+      "program_sha256": "a24aa13a0a9a4d7d1c8752cc9d9a566a5fae3bc20ba0ca3ba11368abd613e43c",
+      "known_balance_donation_bug": false,
+      "control_kind": "verified_fixed_version",
+      "evidence": "https://github.com/renato-osec/goonfi-v2-decompiled#goonfi-v2",
+      "scope": "OtterSec states GoonFi was upgraded on 2026-10-06 to fix the reported bugs. This fixture pins a later on-chain ELF deployed at slot 453915006 and observed at slot 458251038. A positive balance-sensitivity signal is a false positive against this published fix label.",
+      "deployment_slot": 453915006,
+      "deployment_time_utc": "2026-10-06T13:27:48Z",
+      "deployment_time_source": "Solana mainnet getBlockTime at slot 453915006"
+    },
+    {
+      "name": "oracle-updater-unrelated",
+      "program_sha256": "0fc545beb6abd12682ae68a27fa1e2a22d86d5d1dbbbe6d1e8f49e53ef762695",
+      "known_balance_donation_bug": false,
+      "control_kind": "unrelated_program",
+      "evidence": "No vault swap path in the pinned oracle updater fixture; diagnostic only, excluded from specificity."
+    }
+  ]
+}

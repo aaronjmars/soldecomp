@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "program": {
+    "id": "GznfvLQ7LGFiG9DzgJgrgEhNCibXAdU6ysfnHDzfZKWA",
+    "elf": "../programs/cpi-insecure.so",
+    "sha256": "ed906b179fe02cc69484ae357f9831b4b69145f7757c4f40ae8ea832df24f55c",
+    "loader": "BPFLoader2111111111111111111111111111111111"
+  },
+  "origin": {
+    "kind": "synthetic_source_control",
+    "replay_mode": "instruction",
+    "state_exact": true,
+    "program_version_verified": true
+  },
+  "payer": "uXhh74h6LYEULS6BTTmWC4wG5GiqBzMgtvSTGJ5EVSw",
+  "instruction": {
+    "program_id": "GznfvLQ7LGFiG9DzgJgrgEhNCibXAdU6ysfnHDzfZKWA",
+    "accounts": [
+      {
+        "pubkey": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "is_signer": false,
+        "is_writable": false
+      }
+    ],
+    "data_base64": ""
+  },
+  "accounts": {
+    "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA": {
+      "lamports": 1,
+      "owner": "BPFLoader2111111111111111111111111111111111",
+      "executable": false,
+      "rent_epoch": 0,
+      "data_base64": ""
+    },
+    "uXhh74h6LYEULS6BTTmWC4wG5GiqBzMgtvSTGJ5EVSw": {
+      "lamports": 1000000000,
+      "owner": "11111111111111111111111111111111",
+      "executable": false,
+      "rent_epoch": 0,
+      "data_base64": ""
+    }
+  },
+  "mutations": [],
+  "notes": [
+    "Source-built arbitrary-CPI control. Account 0 is the program the handler would invoke; the secure variant requires it to be the SPL Token program. Synthetic program, not a deployed exploit."
+  ]
+}

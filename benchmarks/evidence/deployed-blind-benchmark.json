@@ -1,0 +1,105 @@
+{
+  "kind": "deployed_program_label_held_out_benchmark_evidence",
+  "sources": [
+    "https://osec.io/blog/goonfi-decompilation/",
+    "https://github.com/renato-osec/goonfi-v2-decompiled#goonfi-v2"
+  ],
+  "interpretation": "The detector finds balance sensitivity in both the published vulnerable version and a later fixed version, so it cannot yet decide whether the signal is an exploitable bug.",
+  "labels_used_by_detector": false,
+  "comparable_confusion": {
+    "true_positive": 1,
+    "false_positive": 1,
+    "true_negative": 0,
+    "false_negative": 0
+  },
+  "deployed_known_bug_positives": 1,
+  "verified_fixed_version_controls": 1,
+  "unrelated_controls": 1,
+  "field_accuracy_measurable": false,
+  "cases": [
+    {
+      "name": "goonfi-original-deployed",
+      "program_sha256": "6a2a8670a56b25baac9f956c428358697b537fab7d0c3ebc13eeb880600f767d",
+      "published_bug": true,
+      "control_kind": "published_deployed_bug",
+      "candidate_found": true,
+      "scenarios": [
+        {
+          "vault_account_index": 4,
+          "donation_amount": 98103351,
+          "donor_funding_assumption": 98103352,
+          "transfer_succeeded": true,
+          "target_success": true,
+          "token_effect_changes": [
+            {
+              "account": "5f4RpFqyhN9nEVhkAWYTr5g4kgrVyqMBWo2enyFWLFsf",
+              "control_delta": 3801743,
+              "donation_delta": 3801797,
+              "difference": 54
+            }
+          ],
+          "balance_sensitive_candidate": true
+        },
+        {
+          "vault_account_index": 5,
+          "donation_amount": 17378434003,
+          "donor_funding_assumption": 17378434004,
+          "transfer_succeeded": true,
+          "target_success": true,
+          "token_effect_changes": [],
+          "balance_sensitive_candidate": false
+        }
+      ]
+    },
+    {
+      "name": "goonfi-later-deployed",
+      "program_sha256": "a24aa13a0a9a4d7d1c8752cc9d9a566a5fae3bc20ba0ca3ba11368abd613e43c",
+      "published_bug": false,
+      "control_kind": "verified_fixed_version",
+      "candidate_found": true,
+      "scenarios": [
+        {
+          "vault_account_index": 4,
+          "donation_amount": 8300448,
+          "donor_funding_assumption": 8300449,
+          "transfer_succeeded": true,
+          "target_success": true,
+          "token_effect_changes": [
+            {
+              "account": "8WFc4nvo1cv73KEtVsiMQDGs8nCJ85xZoAdQf5NW5FDx",
+              "control_delta": 50951,
+              "donation_delta": 50952,
+              "difference": 1
+            }
+          ],
+          "balance_sensitive_candidate": true
+        },
+        {
+          "vault_account_index": 5,
+          "donation_amount": 14674598277,
+          "donor_funding_assumption": 14674598278,
+          "transfer_succeeded": true,
+          "target_success": true,
+          "token_effect_changes": [],
+          "balance_sensitive_candidate": false
+        }
+      ],
+      "deployment_slot": 453915006,
+      "deployment_time_utc": "2026-10-06T13:27:48Z"
+    },
+    {
+      "name": "oracle-updater-unrelated",
+      "program_sha256": "0fc545beb6abd12682ae68a27fa1e2a22d86d5d1dbbbe6d1e8f49e53ef762695",
+      "published_bug": false,
+      "candidate_found": false,
+      "comparable": false
+    }
+  ],
+  "limitations": [
+    "The detector tests whether a valid unsolicited SPL Token transfer changes later token effects; it does not decide whether the behavior is an exploitable bug.",
+    "The positive was publicly disclosed before this detector was built, so this is a held-out label run, not a prospective discovery.",
+    "The published fixed GoonFi version can remain balance-sensitive; a positive signal on it is a false positive as a bug verdict.",
+    "Unrelated programs without a vault path are excluded from specificity calculations.",
+    "One vulnerable/fixed pair cannot estimate accuracy across deployed programs."
+  ]
+}

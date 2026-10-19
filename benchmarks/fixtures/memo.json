@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "program": {
+    "id": "MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr",
+    "elf": "../programs/memo.so",
+    "sha256": "f520eaf096361abbb9639ea4dc3e5388a87b9330e121f476607b87c46ef67954",
+    "loader": "BPFLoader2111111111111111111111111111111111"
+  },
+  "extra_programs": [],
+  "origin": {
+    "kind": "synthetic",
+    "state_exact": true
+  },
+  "payer": "Gxw7481PipL83rBzPwrSEjruUNNMPspWw5hXvbxssAx8",
+  "instruction": {
+    "program_id": "MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr",
+    "accounts": [],
+    "data_base64": "aGVsbG8="
+  },
+  "accounts": {
+    "Gxw7481PipL83rBzPwrSEjruUNNMPspWw5hXvbxssAx8": {
+      "lamports": 1000000000,
+      "owner": "11111111111111111111111111111111",
+      "executable": false,
+      "rent_epoch": 0,
+      "data_base64": ""
+    }
+  },
+  "mutations": [
+    {
+      "name": "different-memo",
+      "account": "",
+      "instruction_data_base64": "d29ybGQ="
+    }
+  ]
+}

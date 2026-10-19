@@ -1,0 +1,58 @@
+{
+  "kind": "goonfi_arithmetic_provenance_gap",
+  "program_sha256": "a24aa13a0a9a4d7d1c8752cc9d9a566a5fae3bc20ba0ca3ba11368abd613e43c",
+  "source_account": "FKKpxrDezYSw5JoP2k5xaABPk2De3xvsU7gXkfsdJw3f",
+  "root_loads": [
+    {
+      "step": 17323,
+      "address": 64440,
+      "virtual_address": 17179913072,
+      "width": 8,
+      "register": 3,
+      "input_account_mapping": {
+        "account": "FKKpxrDezYSw5JoP2k5xaABPk2De3xvsU7gXkfsdJw3f",
+        "account_index": 4,
+        "account_data_offset": 64,
+        "layout_source": "captured_instruction_account_lengths"
+      },
+      "matches_mutated_field": true
+    }
+  ],
+  "arithmetic_events": 156,
+  "tainted_branches": 12,
+  "memory_stores": 10,
+  "memory_reloads": 10,
+  "first_control_flow_divergence_after_source": {
+    "baseline_step": 24776,
+    "mutated_step": 24776,
+    "baseline_address": "0x203e0",
+    "mutated_address": "0x203e8"
+  },
+  "changed_cpi_data_without_lineage": [
+    {
+      "address": "0x11710",
+      "visit": 1
+    }
+  ],
+  "cpi_data_comparisons": [
+    {
+      "address": "0x11150",
+      "visit": 1,
+      "baseline_data_hex": "036ccb790200000000",
+      "mutated_data_hex": "036ccb790200000000",
+      "baseline_transfer_amount": 41536364,
+      "mutated_transfer_amount": 41536364,
+      "instruction_data_changed": false
+    },
+    {
+      "address": "0x11710",
+      "visit": 1,
+      "baseline_data_hex": "0307c7000000000000",
+      "mutated_data_hex": "0308c7000000000000",
+      "baseline_transfer_amount": 50951,
+      "mutated_transfer_amount": 50952,
+      "instruction_data_changed": true
+    }
+  ],
+  "conclusion": "The source value reaches many arithmetic instructions, but the changed CPI transfer byte has no continuous proven lineage. The arithmetic proof remains incomplete."
+}

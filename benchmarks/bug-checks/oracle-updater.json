@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "evidence_class": "historical_clean_control",
+  "fixture": "../fixtures/oracle-updater-isolated.json",
+  "checks": [
+    {
+      "name": "unsigned-oracle-update",
+      "kind": "authorization",
+      "mutation": {
+        "signer_overrides": {
+          "FTp1BybZ51NiZKbnZH6MsrV3tUZNauhpQMbBcqYUEr5f": false
+        }
+      },
+      "expected_finding": false,
+      "expected_error_contains": "MissingRequiredSignature"
+    }
+  ]
+}

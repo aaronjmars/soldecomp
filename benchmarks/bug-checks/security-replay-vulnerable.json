@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "evidence_class": "independent_example_known_bug",
+  "fixture": "../fixtures/security-examples-replay.json",
+  "checks": [
+    {
+      "name": "reused-instruction",
+      "kind": "replay_protection",
+      "instruction_data_base64": "DwABAAAAAAAAAA==",
+      "prelude_instructions": [
+        {
+          "program_id": "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS",
+          "accounts": [
+            {
+              "pubkey": "CjKyGYwgfxW8o4VsYKS1f7MfUMDWok5q3b45RXU6XQ8w",
+              "is_signer": false,
+              "is_writable": true
+            }
+          ],
+          "data_base64": "DwAAAAAAAAAAAA=="
+        }
+      ],
+      "mutation": {
+        "instruction_data_base64": "DwAAAAAAAAAAAA=="
+      },
+      "state_assertions": [
+        {
+          "field": {
+            "account": "CjKyGYwgfxW8o4VsYKS1f7MfUMDWok5q3b45RXU6XQ8w",
+            "offset": 33,
+            "encoding": "u64_le"
+          },
+          "baseline": 2,
+          "scenario": 2
+        },
+        {
+          "field": {
+            "account": "CjKyGYwgfxW8o4VsYKS1f7MfUMDWok5q3b45RXU6XQ8w",
+            "offset": 41,
+            "encoding": "u64_le"
+          },
+          "baseline": 0,
+          "scenario": 0
+        }
+      ],
+      "expected_finding": true
+    }
+  ]
+}

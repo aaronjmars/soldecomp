@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "evidence_class": "synthetic_known_bug",
+  "fixture": "../fixtures/guarded-insecure.json",
+  "checks": [
+    {
+      "name": "minimum-output",
+      "kind": "slippage",
+      "output_field": {
+        "account": "7Hu2dZ8zsEv1WTa4TMNZbAaUCtZ7QxngKpNU1e9xG1BF",
+        "offset": 0
+      },
+      "minimum_output_amount": 10,
+      "minimum_output_instruction_offset": 1,
+      "mutation": {
+        "instruction_data_base64": "AQoAAAAAAAAA"
+      },
+      "expected_finding": true
+    },
+    {
+      "name": "stale-oracle",
+      "kind": "stale_oracle",
+      "instruction_data_base64": "AwAAAAAAAAAA",
+      "oracle_timestamp": {
+        "account": "7Hu2dZ8zsEv1WTa4TMNZbAaUCtZ7QxngKpNU1e9xG1BF",
+        "offset": 8
+      },
+      "max_age_seconds": 60,
+      "mutation": {
+        "account": "7Hu2dZ8zsEv1WTa4TMNZbAaUCtZ7QxngKpNU1e9xG1BF",
+        "offset": 8,
+        "data_base64": "AAAAAAAAAAA="
+      },
+      "expected_finding": true
+    },
+    {
+      "name": "over-limit-borrow",
+      "kind": "lending_solvency",
+      "instruction_data_base64": "AgUAAAAAAAAA",
+      "collateral_field": {
+        "account": "7Hu2dZ8zsEv1WTa4TMNZbAaUCtZ7QxngKpNU1e9xG1BF",
+        "offset": 16
+      },
+      "debt_field": {
+        "account": "7Hu2dZ8zsEv1WTa4TMNZbAaUCtZ7QxngKpNU1e9xG1BF",
+        "offset": 24
+      },
+      "collateral_price": 1,
+      "debt_price": 1,
+      "max_ltv_bps": 5000,
+      "mutation": {
+        "instruction_data_base64": "Ag8AAAAAAAAA"
+      },
+      "expected_finding": true
+    }
+  ]
+}

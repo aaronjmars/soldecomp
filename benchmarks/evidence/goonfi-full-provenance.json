@@ -1,0 +1,79 @@
+{
+  "kind": "goonfi_differential_memory_provenance",
+  "program_sha256": "a24aa13a0a9a4d7d1c8752cc9d9a566a5fae3bc20ba0ca3ba11368abd613e43c",
+  "mutation": "bid-vault-plus-10m",
+  "account": "FKKpxrDezYSw5JoP2k5xaABPk2De3xvsU7gXkfsdJw3f",
+  "old_token_amount": 83004487,
+  "new_token_amount": 93004487,
+  "root_loads": [
+    {
+      "step": 17323,
+      "address": 64440,
+      "virtual_address": 17179913072,
+      "width": 8,
+      "register": 3,
+      "input_account_mapping": {
+        "account": "FKKpxrDezYSw5JoP2k5xaABPk2De3xvsU7gXkfsdJw3f",
+        "account_index": 4,
+        "account_data_offset": 64,
+        "layout_source": "captured_instruction_account_lengths"
+      },
+      "matches_mutated_field": true
+    }
+  ],
+  "memory_event_kinds": {
+    "stores": 10,
+    "reloads": 10
+  },
+  "cpi_boundaries": [
+    {
+      "step": 33623,
+      "address": "0x11150",
+      "callee": "sol_invoke_signed_c",
+      "instruction_pointer": "0x200004fa0",
+      "tainted_nearby_bytes": 0,
+      "data_pointer": "0x200004ea0",
+      "data_length": 9,
+      "tainted_instruction_data_bytes": 0,
+      "tainted_argument_registers": []
+    },
+    {
+      "step": 33962,
+      "address": "0x11710",
+      "callee": "sol_invoke_signed_c",
+      "instruction_pointer": "0x200004fa0",
+      "tainted_nearby_bytes": 0,
+      "data_pointer": "0x200004e96",
+      "data_length": 9,
+      "tainted_instruction_data_bytes": 0,
+      "tainted_argument_registers": []
+    }
+  ],
+  "cpi_candidates": [],
+  "cpi_data_comparisons": [
+    {
+      "address": "0x11150",
+      "visit": 1,
+      "baseline_data_hex": "036ccb790200000000",
+      "mutated_data_hex": "036ccb790200000000",
+      "baseline_transfer_amount": 41536364,
+      "mutated_transfer_amount": 41536364,
+      "instruction_data_changed": false
+    },
+    {
+      "address": "0x11710",
+      "visit": 1,
+      "baseline_data_hex": "0307c7000000000000",
+      "mutated_data_hex": "0308c7000000000000",
+      "baseline_transfer_amount": 50951,
+      "mutated_transfer_amount": 50952,
+      "instruction_data_changed": true
+    }
+  ],
+  "limitations": [
+    "A matched load roots the changed value at a virtual memory address; the trace cannot by itself map that address to a unique account if equal bytes occur elsewhere.",
+    "Store-to-load links use exact virtual addresses within one invocation. CPI data links are candidates unless the pointed-to byte range is observed.",
+    "If control flow diverges, matching by program counter and visit number may miss or mispair later steps.",
+    "Only one target-program invocation per scenario is supported."
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "program_id": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+  "owner": "BPFLoaderUpgradeab1e11111111111111111111111",
+  "programdata": "DoU57AYuPFu2QU514RktNPG22QhApEjnKxnBcu4BHDTY",
+  "observed_slot": 458461093,
+  "programdata_observed_slot": 458461094,
+  "deployed_at_slot": 427147035,
+  "bytes": 1382016,
+  "sha256": "0999dbf708971e723b08d1caafc988826a59c6001ed6dc02260da07defbe1469",
+  "rpc": "https://api.mainnet-beta.solana.com"
+}

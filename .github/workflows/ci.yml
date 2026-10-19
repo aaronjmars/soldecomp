@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: 1.99.1
+          components: rustfmt
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: replay -> target
+      - name: Check Python
+        run: python3 -m py_compile soldecomp.py
+      - name: Check Rust format
+        run: cargo fmt --manifest-path replay/Cargo.toml -- --check
+      - name: Build replay runner
+        run: cargo build --locked --manifest-path replay/Cargo.toml
+      - name: Run cross-program benchmark
+        run: python3 soldecomp.py benchmark benchmarks/manifest.json --out out/ci-benchmark
+      - name: Score generic detectors against the labeled corpus
+        run: python3 soldecomp.py corpus-benchmark benchmarks/corpus/manifest.json --out out/ci-corpus
+      - name: Test reconstruction helpers
+        run: python3 -m unittest discover -s tests

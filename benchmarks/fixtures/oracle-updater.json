@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "program": {
+    "id": "dijkbkCAKfFTCxQg3u1pg82gVU1jJGHBBRcteD11mBu",
+    "elf": "../programs/oracle-updater.so",
+    "sha256": "0fc545beb6abd12682ae68a27fa1e2a22d86d5d1dbbbe6d1e8f49e53ef762695",
+    "loader": "BPFLoaderUpgradeab1e11111111111111111111111",
+    "deployed_at_slot": 404369628,
+    "version_observed_slot": 449999999,
+    "version_match_mode": "exact_bytes",
+    "archive_match_mode": "exact_bytes",
+    "archived_sha256": "0fc545beb6abd12682ae68a27fa1e2a22d86d5d1dbbbe6d1e8f49e53ef762695",
+    "archived_deployed_at_slot": 404369628
+  },
+  "extra_programs": [],
+  "transaction_base64": "AT60SY7IWVpDOF4uc3zjgG7b9VJhAErNakVas3U/H3YQ/fBmo26bwVKCN+7rLbNhH4fx8I3krjRzstsiFjxJ6QmAAQACBNbh3WEjoByHxBWk/v////9bFsEifE8za8OJ1pg3EsmKG1GCKMo9STle5sxGWIgVIJoGDYLk134aG/UnP9uMKXgDBkZv5SEXMv/srbpyw5vnvIzlu8X3EmssQ5s6QAAAAAloGfZKAvdXJHoeJzNoY5iNbKgT2jEcJ/lZlSdrkFHo65CMQ9AHsY9EcSBEcAoxV1Gq/HGBTvfjqykdqny54I8DAwIAASGgqRadAAAAAGwcG50AAAAAf3TSGnAjEQB0we7SoAEAAP8CAAkDQEIPAAAAAAACAAUCRAEAAAA=",
+  "origin": {
+    "kind": "transaction",
+    "replay_mode": "full_transaction",
+    "signature": "2FiJsAn5uLHG6MRsbpfz1aUVouukRP5JBKRL5EShn9Nw8ad3caGMNHRNXu6RiEY2WUAsQsWNSeUqWFmAzuVPudVa",
+    "instruction_index": 0,
+    "inner_index": null,
+    "transaction_slot": 450000000,
+    "account_observed_slot": 449999999,
+    "state_exact": false,
+    "program_version_verified": true,
+    "signer_overrides": [],
+    "route_context_sysvar_base64": null,
+    "account_state_source": {
+      "kind": "slot_archive",
+      "provider": "alchemy",
+      "slot": 449999999,
+      "relation": "before_transaction_slot"
+    }
+  },
+  "payer": "FTp1BybZ51NiZKbnZH6MsrV3tUZNauhpQMbBcqYUEr5f",
+  "instruction": {
+    "program_id": "dijkbkCAKfFTCxQg3u1pg82gVU1jJGHBBRcteD11mBu",
+    "accounts": [
+      {
+        "pubkey": "FTp1BybZ51NiZKbnZH6MsrV3tUZNauhpQMbBcqYUEr5f",
+        "is_signer": true,
+        "is_writable": true
+      },
+      {
+        "pubkey": "2qe6UGWxM83DR9Fk4E1bgDHv9GcWQVzcTe9qGpUdBmwV",
+        "is_signer": false,
+        "is_writable": true
+      }
+    ],
+    "data_base64": "oKkWnQAAAABsHBudAAAAAH900hpwIxEAdMHu0qABAAD/"
+  },
+  "accounts": {
+    "FTp1BybZ51NiZKbnZH6MsrV3tUZNauhpQMbBcqYUEr5f": {
+      "lamports": 11786904345,
+      "owner": "11111111111111111111111111111111",
+      "executable": false,
+      "rent_epoch": 18446744073709551615,
+      "data_base64": ""
+    },
+    "2qe6UGWxM83DR9Fk4E1bgDHv9GcWQVzcTe9qGpUdBmwV": {
+      "lamports": 1464600,
+      "owner": "dijkbkCAKfFTCxQg3u1pg82gVU1jJGHBBRcteD11mBu",
+      "executable": false,
+      "rent_epoch": 18446744073709551615,
+      "data_base64": "7NkcnQAAAABWOx+dAAAAAH500hpwIxEArcDu0qABAAA="
+    },
+    "ComputeBudget111111111111111111111111111111": null,
+    "dijkbkCAKfFTCxQg3u1pg82gVU1jJGHBBRcteD11mBu": null
+  },
+  "mutations": [],
+  "notes": [
+    "Executable account ComputeBudget111111111111111111111111111111 was not copied; ensure the runtime has it if used by CPI",
+    "Executable account dijkbkCAKfFTCxQg3u1pg82gVU1jJGHBBRcteD11mBu was not copied; ensure the runtime has it if used by CPI",
+    "Archived account bytes are exact as of the preceding slot, not necessarily immediately before this instruction within its slot or transaction.",
+    "Archived pre-slot balances differ from transaction pre-balances; another write may have occurred in the same slot."
+  ]
+}

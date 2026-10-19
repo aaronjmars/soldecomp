@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "program": {
+    "id": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+    "elf": "../programs/spl-token.so",
+    "sha256": "8190d3f7ceb6cb7a7a8d8924bff89f9f611e15ce1f806f2b6237f3311a98f697",
+    "loader": "BPFLoader2111111111111111111111111111111111"
+  },
+  "origin": {
+    "kind": "synthetic_deployed_control",
+    "replay_mode": "instruction",
+    "state_exact": true,
+    "program_version_verified": true
+  },
+  "payer": "AcRHkUQrFjscRMK4rdXJUqiX5fBXkx9UZP6ofKUpbPai",
+  "instruction": {
+    "program_id": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+    "accounts": [
+      {
+        "pubkey": "6VCdoKLKXjacfbFJQCpPCM6Y3ri3c39tJV6hgzD4Xb2y",
+        "is_signer": false,
+        "is_writable": true
+      },
+      {
+        "pubkey": "Pfsp7qfyXKecpaSNRTkEjfFyYw2JeshAQwQDTD9Tp1A",
+        "is_signer": false,
+        "is_writable": true
+      },
+      {
+        "pubkey": "2aLPFCHfKrNakWoghR31CGp7dBeyUuaftYDGUV1jLpow",
+        "is_signer": true,
+        "is_writable": false
+      }
+    ],
+    "data_base64": "A6CGAQAAAAAA"
+  },
+  "accounts": {
+    "6VCdoKLKXjacfbFJQCpPCM6Y3ri3c39tJV6hgzD4Xb2y": {
+      "lamports": 2039280,
+      "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+      "executable": false,
+      "rent_epoch": 0,
+      "data_base64": "H9WG96hURzX88Ou5S7g++tR+j2yvR2+hjO5EkzjpUZYXZcVJg0uvCtZOnC7zYe+K0n/VcWcUSGWDBASUQ2kPVkBCDwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "Pfsp7qfyXKecpaSNRTkEjfFyYw2JeshAQwQDTD9Tp1A": {
+      "lamports": 2039280,
+      "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+      "executable": false,
+      "rent_epoch": 0,
+      "data_base64": "H9WG96hURzX88Ou5S7g++tR+j2yvR2+hjO5EkzjpUZYFzrwwtxe4Se1FcFILg5GvOUMZCW2ZRcbE+Rs5xbR1NQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "2aLPFCHfKrNakWoghR31CGp7dBeyUuaftYDGUV1jLpow": {
+      "lamports": 1000000000,
+      "owner": "11111111111111111111111111111111",
+      "executable": false,
+      "rent_epoch": 0,
+      "data_base64": ""
+    },
+    "AcRHkUQrFjscRMK4rdXJUqiX5fBXkx9UZP6ofKUpbPai": {
+      "lamports": 1000000000,
+      "owner": "11111111111111111111111111111111",
+      "executable": false,
+      "rent_epoch": 0,
+      "data_base64": ""
+    }
+  },
+  "mutations": [],
+  "notes": [
+    "Synthesized valid SPL Token Transfer against the canonical deployed token program ELF. Accounts are constructed, not captured; this is a deployed clean control for the generic detectors."
+  ]
+}

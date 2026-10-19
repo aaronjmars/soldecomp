@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "program": {
+    "id": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+    "elf": "../programs/token-2022.so",
+    "sha256": "0999dbf708971e723b08d1caafc988826a59c6001ed6dc02260da07defbe1469",
+    "loader": "BPFLoader2111111111111111111111111111111111"
+  },
+  "origin": {
+    "kind": "synthetic_deployed_control",
+    "replay_mode": "instruction",
+    "state_exact": true,
+    "program_version_verified": true
+  },
+  "payer": "GTGBg4UfpmYX2iGR6Y5Ra4CKpez288bQhwFkVRqvLjFt",
+  "instruction": {
+    "program_id": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+    "accounts": [
+      {
+        "pubkey": "Gmysn5noYrW1mfGWAUjqNJZsb2Xp3k57CjN3h7WtyKUZ",
+        "is_signer": false,
+        "is_writable": true
+      },
+      {
+        "pubkey": "6EYKXu7bdqFL7eCFURjRFfSuLf3w35nARtJfBiV1xdRB",
+        "is_signer": false,
+        "is_writable": true
+      },
+      {
+        "pubkey": "9q7gQ63i6Cpr3Ns44kYy3NUmdyPmxzzKHL4sn9bAqEMt",
+        "is_signer": true,
+        "is_writable": false
+      }
+    ],
+    "data_base64": "A6CGAQAAAAAA"
+  },
+  "accounts": {
+    "Gmysn5noYrW1mfGWAUjqNJZsb2Xp3k57CjN3h7WtyKUZ": {
+      "lamports": 2039280,
+      "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+      "executable": false,
+      "rent_epoch": 0,
+      "data_base64": "CHm2lGhoFBPsa778L/VEH4ZhRQGzkIXJTNeLuOrSoX+DMO0w/Jgv47GaWdzA2/L8MQ2D/pKS5KTQ8QSG+MgCX0BCDwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "6EYKXu7bdqFL7eCFURjRFfSuLf3w35nARtJfBiV1xdRB": {
+      "lamports": 2039280,
+      "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+      "executable": false,
+      "rent_epoch": 0,
+      "data_base64": "CHm2lGhoFBPsa778L/VEH4ZhRQGzkIXJTNeLuOrSoX9NwmX0C1bB9gJRoNZAnIHPlYw4aZ1X/KQUdMYSAmBf4gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "9q7gQ63i6Cpr3Ns44kYy3NUmdyPmxzzKHL4sn9bAqEMt": {
+      "lamports": 1000000000,
+      "owner": "11111111111111111111111111111111",
+      "executable": false,
+      "rent_epoch": 0,
+      "data_base64": ""
+    },
+    "GTGBg4UfpmYX2iGR6Y5Ra4CKpez288bQhwFkVRqvLjFt": {
+      "lamports": 1000000000,
+      "owner": "11111111111111111111111111111111",
+      "executable": false,
+      "rent_epoch": 0,
+      "data_base64": ""
+    }
+  },
+  "mutations": [],
+  "notes": [
+    "Synthesized valid Token-2022 transfer against the canonical deployed program ELF. Accounts are constructed, not captured; deployed clean control for the generic detectors."
+  ]
+}

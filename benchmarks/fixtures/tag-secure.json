@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "program": {
+    "id": "ErA45EJ9txivRnLG2E6BenXdqjXx3QJaP3RHdzanwxPY",
+    "elf": "../programs/tag-secure.so",
+    "sha256": "94028881cf2f15af7d85a0536e4f7d60926da56c9973fd5c59bbd12cef79f89a",
+    "loader": "BPFLoader2111111111111111111111111111111111"
+  },
+  "origin": {
+    "kind": "synthetic_source_control",
+    "replay_mode": "instruction",
+    "state_exact": true,
+    "program_version_verified": true
+  },
+  "payer": "uXhh74h6LYEULS6BTTmWC4wG5GiqBzMgtvSTGJ5EVSw",
+  "instruction": {
+    "program_id": "ErA45EJ9txivRnLG2E6BenXdqjXx3QJaP3RHdzanwxPY",
+    "accounts": [
+      {
+        "pubkey": "3Ra3qgQKkogVZWsHBrYnBoHGTPmY3ADJgXidH1FpGast",
+        "is_signer": false,
+        "is_writable": false
+      }
+    ],
+    "data_base64": ""
+  },
+  "accounts": {
+    "3Ra3qgQKkogVZWsHBrYnBoHGTPmY3ADJgXidH1FpGast": {
+      "lamports": 1000000,
+      "owner": "ErA45EJ9txivRnLG2E6BenXdqjXx3QJaP3RHdzanwxPY",
+      "executable": false,
+      "rent_epoch": 0,
+      "data_base64": "CAcGBQQDAgE="
+    },
+    "uXhh74h6LYEULS6BTTmWC4wG5GiqBzMgtvSTGJ5EVSw": {
+      "lamports": 1000000000,
+      "owner": "11111111111111111111111111111111",
+      "executable": false,
+      "rent_epoch": 0,
+      "data_base64": ""
+    }
+  },
+  "mutations": [],
+  "notes": [
+    "Source-built type-tag control. Account 0 is program-owned and carries an 8-byte discriminator; the secure variant rejects a changed tag. Synthetic program, not a deployed exploit."
+  ]
+}

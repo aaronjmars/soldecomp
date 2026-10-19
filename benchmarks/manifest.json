@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "name": "memo",
+      "elf": "programs/memo.so",
+      "fixture": "fixtures/memo.json",
+      "minimum_functions": 180,
+      "expected_baseline_success": true,
+      "sha256": "f520eaf096361abbb9639ea4dc3e5388a87b9330e121f476607b87c46ef67954"
+    },
+    {
+      "name": "spl-token",
+      "elf": "programs/spl-token.so",
+      "minimum_functions": 25,
+      "sha256": "8190d3f7ceb6cb7a7a8d8924bff89f9f611e15ce1f806f2b6237f3311a98f697"
+    },
+    {
+      "name": "oracle-updater",
+      "elf": "programs/oracle-updater.so",
+      "fixture": "fixtures/oracle-updater.json",
+      "expected_baseline_success": true,
+      "expected_compute_units": 324,
+      "sha256": "0fc545beb6abd12682ae68a27fa1e2a22d86d5d1dbbbe6d1e8f49e53ef762695"
+    },
+    {
+      "name": "goonfi-original",
+      "elf": "programs/goonfi-original.so",
+      "fixture": "fixtures/goonfi-original.json",
+      "minimum_functions": 180,
+      "expected_baseline_success": true,
+      "expected_token_delta": {
+        "account": "5f4RpFqyhN9nEVhkAWYTr5g4kgrVyqMBWo2enyFWLFsf",
+        "delta": 3801743
+      },
+      "sha256": "6a2a8670a56b25baac9f956c428358697b537fab7d0c3ebc13eeb880600f767d"
+    },
+    {
+      "name": "goonfi-full-route",
+      "elf": "programs/goonfi-current.so",
+      "fixture": "fixtures/goonfi-full-route.json",
+      "minimum_functions": 180,
+      "expected_baseline_success": true,
+      "expected_compute_units": 117562,
+      "expected_token_delta": {
+        "account": "FKKpxrDezYSw5JoP2k5xaABPk2De3xvsU7gXkfsdJw3f",
+        "delta": -50951
+      },
+      "expected_mutations": [
+        {
+          "name": "bid-vault-plus-10m",
+          "success": true,
+          "compute_units": 117557,
+          "token_delta": {
+            "account": "FKKpxrDezYSw5JoP2k5xaABPk2De3xvsU7gXkfsdJw3f",
+            "delta": -50952
+          }
+        }
+      ],
+      "sha256": "a24aa13a0a9a4d7d1c8752cc9d9a566a5fae3bc20ba0ca3ba11368abd613e43c"
+    },
+    {
+      "name": "auth-insecure",
+      "elf": "programs/auth-insecure.so",
+      "fixture": "fixtures/auth-insecure.json",
+      "minimum_functions": 1,
+      "expected_baseline_success": true,
+      "sha256": "041d5264f501ec85079b702379760047c6bdb42df76f35a538e80f800d5643c0"
+    },
+    {
+      "name": "auth-secure",
+      "elf": "programs/auth-secure.so",
+      "fixture": "fixtures/auth-secure.json",
+      "minimum_functions": 1,
+      "expected_baseline_success": true,
+      "sha256": "473b6c1a88576db0a8e468117df68e778972c5d6f3a6e881e120020a91f2d4f5"
+    },
+    {
+      "name": "guarded-insecure",
+      "elf": "programs/guarded-insecure.so",
+      "fixture": "fixtures/guarded-insecure.json",
+      "minimum_functions": 1,
+      "expected_baseline_success": true,
+      "sha256": "4a4679943793b4077277abe120e677e2a70a8afbad54f644604ff8915c51f232"
+    },
+    {
+      "name": "guarded-secure",
+      "elf": "programs/guarded-secure.so",
+      "fixture": "fixtures/guarded-secure.json",
+      "minimum_functions": 1,
+      "expected_baseline_success": true,
+      "sha256": "bd3a2cdc5bf097b69c7fc8df036946ffa36afdf958ce2089987ff13cafe2f3ff"
+    },
+    {
+      "name": "security-examples",
+      "elf": "programs/security-examples.so",
+      "fixture": "fixtures/security-examples.json",
+      "minimum_functions": 350,
+      "expected_baseline_success": true,
+      "sha256": "0c0c7bae750e0fcd579f0bf961822c6a40df3f65f17c5babd610a3abd2208a68"
+    },
+    {
+      "name": "owner-insecure",
+      "elf": "programs/owner-insecure.so",
+      "fixture": "fixtures/owner-insecure.json",
+      "minimum_functions": 1,
+      "expected_baseline_success": true,
+      "sha256": "e42464aeb77f047a8f9405233819c37c7f68bdca1bf3ab4862f79f3dbfd1ab43"
+    },
+    {
+      "name": "owner-secure",
+      "elf": "programs/owner-secure.so",
+      "fixture": "fixtures/owner-secure.json",
+      "minimum_functions": 1,
+      "expected_baseline_success": true,
+      "sha256": "992faeb239a56de1e5d446c856bd1fdf38d374680e51ba250ea74e3245d850ce"
+    },
+    {
+      "name": "token-2022-transfer",
+      "elf": "programs/token-2022.so",
+      "fixture": "fixtures/token-2022-transfer.json",
+      "minimum_functions": 25,
+      "expected_baseline_success": true,
+      "sha256": "0999dbf708971e723b08d1caafc988826a59c6001ed6dc02260da07defbe1469"
+    },
+    {
+      "name": "tag-insecure",
+      "elf": "programs/tag-insecure.so",
+      "fixture": "fixtures/tag-insecure.json",
+      "minimum_functions": 1,
+      "expected_baseline_success": true,
+      "sha256": "a8c9e596a7ed84e3d25e07bcb16da2cb21e0fb112de33f8accdda0740c18d84f"
+    },
+    {
+      "name": "tag-secure",
+      "elf": "programs/tag-secure.so",
+      "fixture": "fixtures/tag-secure.json",
+      "minimum_functions": 1,
+      "expected_baseline_success": true,
+      "sha256": "94028881cf2f15af7d85a0536e4f7d60926da56c9973fd5c59bbd12cef79f89a"
+    },
+    {
+      "name": "cpi-insecure",
+      "elf": "programs/cpi-insecure.so",
+      "fixture": "fixtures/cpi-insecure.json",
+      "minimum_functions": 1,
+      "expected_baseline_success": true,
+      "sha256": "ed906b179fe02cc69484ae357f9831b4b69145f7757c4f40ae8ea832df24f55c"
+    },
+    {
+      "name": "cpi-secure",
+      "elf": "programs/cpi-secure.so",
+      "fixture": "fixtures/cpi-secure.json",
+      "minimum_functions": 1,
+      "expected_baseline_success": true,
+      "sha256": "c2798f86146a98109b6956d30f3d4832be996c393f9e2e2d5dd5c84e1218861e"
+    }
+  ],
+  "security_check_specs": [
+    "bug-checks/auth-insecure.json",
+    "bug-checks/auth-secure.json",
+    "bug-checks/guarded-insecure.json",
+    "bug-checks/guarded-secure.json",
+    "bug-checks/oracle-updater.json",
+    "bug-checks/security-examples-vulnerable.json",
+    "bug-checks/security-examples-secure.json",
+    "bug-checks/security-replay-vulnerable.json",
+    "bug-checks/security-replay-secure.json"
+  ]
+}

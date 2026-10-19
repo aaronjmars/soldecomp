@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "description": "Labeled corpus scoring the framework-agnostic generic detectors (scan). Mixes synthetic controls with deployed GoonFi; not yet large enough for field accuracy.",
+  "detectors": [
+    "missing_signer",
+    "missing_owner",
+    "balance_sensitivity"
+  ],
+  "cases": [
+    {
+      "name": "auth-insecure",
+      "fixture": "../fixtures/auth-insecure.json",
+      "control_kind": "synthetic_known_bug",
+      "expected": {
+        "missing_signer": true
+      },
+      "evidence": "Source-built missing-signer control (Coral Sealevel Attacks pattern).",
+      "program_sha256": "041d5264f501ec85079b702379760047c6bdb42df76f35a538e80f800d5643c0"
+    },
+    {
+      "name": "auth-secure",
+      "fixture": "../fixtures/auth-secure.json",
+      "control_kind": "synthetic_clean_control",
+      "expected": {
+        "missing_signer": false
+      },
+      "evidence": "Fixed variant of the missing-signer control.",
+      "program_sha256": "473b6c1a88576db0a8e468117df68e778972c5d6f3a6e881e120020a91f2d4f5"
+    },
+    {
+      "name": "owner-insecure",
+      "fixture": "../fixtures/owner-insecure.json",
+      "control_kind": "synthetic_known_bug",
+      "expected": {
+        "missing_owner": true
+      },
+      "evidence": "Source-built missing-owner-check control.",
+      "program_sha256": "e42464aeb77f047a8f9405233819c37c7f68bdca1bf3ab4862f79f3dbfd1ab43"
+    },
+    {
+      "name": "owner-secure",
+      "fixture": "../fixtures/owner-secure.json",
+      "control_kind": "synthetic_clean_control",
+      "expected": {
+        "missing_owner": false
+      },
+      "evidence": "Fixed variant of the owner-check control.",
+      "program_sha256": "992faeb239a56de1e5d446c856bd1fdf38d374680e51ba250ea74e3245d850ce"
+    },
+    {
+      "name": "goonfi-original-deployed",
+      "fixture": "../fixtures/goonfi-original.json",
+      "control_kind": "deployed_known_bug",
+      "deployed": true,
+      "expected": {
+        "balance_sensitivity": true
+      },
+      "evidence": "https://osec.io/blog/goonfi-decompilation/",
+      "program_sha256": "6a2a8670a56b25baac9f956c428358697b537fab7d0c3ebc13eeb880600f767d"
+    },
+    {
+      "name": "goonfi-later-deployed",
+      "fixture": "../fixtures/goonfi-full-route.json",
+      "control_kind": "verified_fixed_version",
+      "deployed": true,
+      "expected": {
+        "balance_sensitivity": false
+      },
+      "evidence": "https://github.com/renato-osec/goonfi-v2-decompiled#goonfi-v2 (upgraded 2026-10-06)",
+      "program_sha256": "a24aa13a0a9a4d7d1c8752cc9d9a566a5fae3bc20ba0ca3ba11368abd613e43c",
+      "expected_prediction": {
+        "balance_sensitivity": true
+      },
+      "note": "OtterSec reports the 2026-10-06 upgrade fixed the reported bugs, so the true label is not vulnerable. Balance sensitivity can remain after a fix, so the detector is expected to still flag it; this is a documented specificity limit, counted as a false positive in the confusion matrix."
+    },
+    {
+      "name": "spl-token-transfer",
+      "fixture": "../fixtures/spl-token-transfer.json",
+      "program_sha256": "8190d3f7ceb6cb7a7a8d8924bff89f9f611e15ce1f806f2b6237f3311a98f697",
+      "control_kind": "deployed_clean_control",
+      "deployed": true,
+      "expected": {
+        "missing_signer": false,
+        "balance_sensitivity": false
+      },
+      "evidence": "Canonical deployed SPL Token program; a valid Transfer, both detectors expected clean."
+    },
+    {
+      "name": "token-2022-transfer",
+      "fixture": "../fixtures/token-2022-transfer.json",
+      "program_sha256": "0999dbf708971e723b08d1caafc988826a59c6001ed6dc02260da07defbe1469",
+      "control_kind": "deployed_clean_control",
+      "deployed": true,
+      "expected": {
+        "missing_signer": false
+      },
+      "evidence": "Canonical deployed Token-2022 program; a valid transfer, detectors expected clean.",
+      "note": "The balance-sensitivity detector only recognizes classic SPL Token vaults, so it does not run here; only the signer detector is scored."
+    },
+    {
+      "name": "tag-insecure",
+      "fixture": "../fixtures/tag-insecure.json",
+      "program_sha256": "a8c9e596a7ed84e3d25e07bcb16da2cb21e0fb112de33f8accdda0740c18d84f",
+      "control_kind": "synthetic_known_bug",
+      "expected": {
+        "account_substitution": true
+      },
+      "evidence": "Source-built missing type-discriminator control."
+    },
+    {
+      "name": "tag-secure",
+      "fixture": "../fixtures/tag-secure.json",
+      "program_sha256": "94028881cf2f15af7d85a0536e4f7d60926da56c9973fd5c59bbd12cef79f89a",
+      "control_kind": "synthetic_clean_control",
+      "expected": {
+        "account_substitution": false
+      },
+      "evidence": "Fixed variant of the type-discriminator control."
+    },
+    {
+      "name": "cpi-insecure",
+      "fixture": "../fixtures/cpi-insecure.json",
+      "program_sha256": "ed906b179fe02cc69484ae357f9831b4b69145f7757c4f40ae8ea832df24f55c",
+      "control_kind": "synthetic_known_bug",
+      "expected": {
+        "arbitrary_cpi": true
+      },
+      "evidence": "Source-built arbitrary-CPI control."
+    },
+    {
+      "name": "cpi-secure",
+      "fixture": "../fixtures/cpi-secure.json",
+      "program_sha256": "c2798f86146a98109b6956d30f3d4832be996c393f9e2e2d5dd5c84e1218861e",
+      "control_kind": "synthetic_clean_control",
+      "expected": {
+        "arbitrary_cpi": false
+      },
+      "evidence": "Fixed variant of the arbitrary-CPI control."
+    }
+  ]
+}
