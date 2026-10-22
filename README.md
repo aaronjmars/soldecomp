@@ -62,6 +62,13 @@ python3 soldecomp.py hydrate out/f.json --out out/f-pre-slot.json
 python3 soldecomp.py replay out/f-pre-slot.json --out out/replay.json
 ```
 
+`hydrate` needs historical account state, not just archived transactions: the RPC must accept a `slot` param on `getAccountInfo` and answer with `context.slot` equal to that slot (anything else is rejected). Tested with Alchemy Solana mainnet (`https://solana-mainnet.g.alchemy.com/v2/<key>`):
+
+```text
+{"method":"getAccountInfo","params":["11111111111111111111111111111111",{"slot":459000000,"encoding":"base64","commitment":"finalized"}]}
+→ {"result":{"context":{"apiVersion":"4.1.0","slot":459000000},"value":{...}}}
+```
+
 ## Commands
 
 | Group | Commands |
